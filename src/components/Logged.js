@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme, GlobalStyles } from "./theme";
+import { lightTheme, darkTheme, GlobalStyles } from "./Theme";
 
 const Button = styled.button`
     background: transparent;

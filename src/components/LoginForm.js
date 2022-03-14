@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 function LoginForm({ Login, error }) {
     const [details, setDetails] = useState({ usernumber: "001C", password: "" });
     const accountinput = useRef(null);
+    
     const submitHandler = (e) => {
         e.preventDefault();
         Login(details);
