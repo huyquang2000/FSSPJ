@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import LoginForm from './LoginForm';
 import Logged from './Logged'
+import {users} from './Userdata'
 
 function Login() {
-    const adminUser = {
-        usernumber: "001C",
-        password: "1234"
-    }
 
 
     const [user, setUser] = useState({
@@ -17,8 +14,15 @@ function Login() {
     const [error, setError] = useState("");
 
     function Login(details) {
-        console.log(details);
-        if (details.usernumber == adminUser.usernumber && details.password == adminUser.password) {
+        // const checkuser = users.map(user => {
+        //     if () {
+        //         return true;
+        //     }
+        //     else {
+        //         return false;
+        //     }
+        // })
+        if (users.find(user => (user.usernumber === details.usernumber && user.password === details.password))) {
             console.log("Logged in");
             setUser({
                 usernumber: details.usernumber,
@@ -40,9 +44,9 @@ function Login() {
     return (
         <div className="Login" > {
             (user.usernumber != "") ? (<div>
-                <Logged/>
+                <Logged />
                 <button className='log-out-btn btn-inp' onClick={Logout}>Log out</button>
-            </div>) :(< LoginForm Login={Login} error={error} />)
+            </div>) : (< LoginForm Login={Login} error={error} />)
         }
         </div>
     );
