@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import LoginForm from './LoginForm';
 import Logged from './Logged'
-import {users} from './Userdata'
+import { users } from './Userdata'
+import { Link } from 'react-router-dom';
 
 function Login() {
-
 
     const [user, setUser] = useState({
         usernumber: "",
@@ -14,15 +14,9 @@ function Login() {
     const [error, setError] = useState("");
 
     function Login(details) {
-        // const checkuser = users.map(user => {
-        //     if () {
-        //         return true;
-        //     }
-        //     else {
-        //         return false;
-        //     }
-        // })
-        if (users.find(user => (user.usernumber === details.usernumber && user.password === details.password))) {
+        const checkuser = users.find(user => (user.usernumber === details.usernumber && user.password === details.password));
+        if (checkuser) {
+
             console.log("Logged in");
             setUser({
                 usernumber: details.usernumber,
@@ -46,8 +40,15 @@ function Login() {
             (user.usernumber != "") ? (<div>
                 <Logged />
                 <button className='log-out-btn btn-inp' onClick={Logout}>Log out</button>
-            </div>) : (< LoginForm Login={Login} error={error} />)
+            </div>) : (
+                <div>
+                    {/* <Link to="/Home" className='home-page'>
+                        <h1 >Trang chủ</h1>
+                    </Link> */}
+                    < LoginForm Login={Login} error={error} />
+                </div>)
         }
+
         </div>
     );
 }

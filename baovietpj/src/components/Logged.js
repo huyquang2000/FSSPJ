@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./Theme";
+import { Link } from 'react-router-dom';
 
 const Button = styled.button`
     background: transparent;
@@ -25,6 +26,7 @@ function Logged() {
                 <Button>
                     <button  className='toggle-theme btn-inp' onClick={() => themeToggle()}><StyleDiv>Theme:{theme}</StyleDiv> </button>
                 </Button>
+                
             </div>
         </ThemeProvider>
     )
