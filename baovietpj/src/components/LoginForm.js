@@ -14,10 +14,12 @@ function LoginForm({ Login, error }) {
         <div>
             <form onSubmit={submitHandler}>
                 <div className='form-inner'>
+                    
+                    <Link to="/Home" className='home-page'>
                     <div className='img-logo'>
                     </div>
+                    </Link>
                     <h2>Đăng nhập</h2>
-                    {/*ERROR*/}
                     <div className='form-group'>
                         <label htmlFor="usernumber">Tên đăng nhập:</label>
                         <br />

@@ -10,7 +10,7 @@ const Button = styled.button`
 `;
 
 const StyleDiv = styled.div`
-    color: ${(props) => props.theme.fontColor }
+    color: ${(props) => props.theme.fontColor}
 `
 
 function Logged() {
@@ -24,9 +24,9 @@ function Logged() {
             <GlobalStyles />
             <div>
                 <Button>
-                    <button  className='toggle-theme btn-inp' onClick={() => themeToggle()}><StyleDiv>Theme:{theme}</StyleDiv> </button>
+                    <button className='toggle-theme btn-inp' onClick={() => themeToggle()}><StyleDiv>Theme:{theme}</StyleDiv> </button>
                 </Button>
-                
+
             </div>
         </ThemeProvider>
     )

@@ -42,9 +42,6 @@ function Login() {
                 <button className='log-out-btn btn-inp' onClick={Logout}>Log out</button>
             </div>) : (
                 <div>
-                    {/* <Link to="/Home" className='home-page'>
-                        <h1 >Trang chủ</h1>
-                    </Link> */}
                     < LoginForm Login={Login} error={error} />
                 </div>)
         }
