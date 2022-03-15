@@ -6,13 +6,10 @@ function LoginForm({ Login, error }) {
     const submitHandler = (e) => {
         e.preventDefault();
         Login(details);
-        
     }
     useEffect(() => {
         accountinput.current.focus();
     }, [])
-
-    
     return (
         <div>
             <form onSubmit={submitHandler}>
@@ -44,11 +41,11 @@ function LoginForm({ Login, error }) {
                             value={details.password}></input>
                     </div>
                     {(error != "") ? (<div className='error'>Tài khoản hoặc mật khẩu không đúng!<br />Vui lòng thử lại.</div>) : ""}
-                    <input
-                        className='btn-inp'
-                        type="submit"
-                        value="Đăng nhập"
-                    ></input>
+                        <input
+                            className='btn-inp'
+                            type="submit"
+                            value="Đăng nhập"
+                        ></input>
                     <div className='login-flex'>
                         <div ><a href='#' className='login-text'>Mở tài khoản</a></div>
                         <div ><a href='#' className='login-text'>Quên mật khẩu ?</a></div>
