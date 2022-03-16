@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 function LoginForm({ Login, error }) {
-
     const [details, setDetails] = useState({ usernumber: "001C", password: "" });
     const accountinput = useRef(null);
     const submitHandler = (e) => {
@@ -14,7 +13,7 @@ function LoginForm({ Login, error }) {
     }, [])
     return (
         <div>
-            <form onSubmit={submitHandler}>
+            <form onSubmit={submitHandler} >
                 <div className='form-inner'>
                     <Link to="/Home" className='home-page'>
                         <div className='img-logo'>

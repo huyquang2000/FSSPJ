@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import LoginForm from './LoginForm';
-import { users } from '../../serverAPI/Userdata'
+import { users } from '../../serverAPI/Userdata';
+import {useNavigate  } from 'react-router-dom';
 import './Login.css';
 function Login() {
-
+    const navigate  = useNavigate();
+    const handledStory = () => {
+        navigate('/Home')
+    }
     const [user, setUser] = useState({
         usernumber: "",
         password: ""
@@ -20,6 +24,7 @@ function Login() {
                 usernumber: details.usernumber,
                 password: details.password
             });
+            handledStory();
         } else {
             console.log("Logged fail");
             setError("Fail")
