@@ -10,7 +10,7 @@ function Header() {
                 <div className='header__honme '>
                     <img className='logo_header' src={logo_header} />
                     <div className='log-in'>
-                        <Link to="/"><button className='log-in-btn'>Đăng nhập</button></Link>
+                        <Link to="/"><button className='log-in-btn'>Đăng xuất</button></Link>
                     </div>
                     
                 </div>
