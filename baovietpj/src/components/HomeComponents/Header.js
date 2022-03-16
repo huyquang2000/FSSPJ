@@ -1,5 +1,5 @@
 import React from 'react'
-import logo_header from '../../img/logo_header.png'
+import logo_header from '../../stlye/img/logo_header.png'
 import './Header.css';
 import { Link } from 'react-router-dom';
 import { CgProfile } from 'react-icons/cg';

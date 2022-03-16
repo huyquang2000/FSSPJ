@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
-
 function LoginForm({ Login, error }) {
+
     const [details, setDetails] = useState({ usernumber: "001C", password: "" });
     const accountinput = useRef(null);
     const submitHandler = (e) => {
@@ -16,10 +16,9 @@ function LoginForm({ Login, error }) {
         <div>
             <form onSubmit={submitHandler}>
                 <div className='form-inner'>
-                    
                     <Link to="/Home" className='home-page'>
-                    <div className='img-logo'>
-                    </div>
+                        <div className='img-logo'>
+                        </div>
                     </Link>
                     <h2>Đăng nhập</h2>
                     <div className='form-group'>
@@ -45,11 +44,11 @@ function LoginForm({ Login, error }) {
                             value={details.password}></input>
                     </div>
                     {(error != "") ? (<div className='error'>Tài khoản hoặc mật khẩu không đúng!<br />Vui lòng thử lại.</div>) : ""}
-                        <input
-                            className='btn-inp'
-                            type="submit"
-                            value="Đăng nhập"
-                        ></input>
+                    <input
+                        className='btn-inp'
+                        type="submit"
+                        value="Đăng nhập"
+                    ></input>
                     <div className='login-flex'>
                         <div ><a href='#' className='login-text'>Mở tài khoản</a></div>
                         <div ><a href='#' className='login-text'>Quên mật khẩu ?</a></div>
