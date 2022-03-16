@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import LoginForm from './LoginForm';
-import Logged from './Logged'
-import { users } from './Userdata'
-import { Link } from 'react-router-dom';
-
+import { users } from '../User_data/Userdata'
+import './Login.css';
 function Login() {
 
     const [user, setUser] = useState({
@@ -38,7 +36,6 @@ function Login() {
     return (
         <div className="Login" > {
             (user.usernumber != "") ? (<div>
-                <Logged />
                 <button className='log-out-btn btn-inp' onClick={Logout}>Log out</button>
             </div>) : (
                 <div>
